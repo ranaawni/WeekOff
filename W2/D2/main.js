@@ -240,3 +240,154 @@ function totalNumberOfCharacter (array){
   return result;
 }
 
+//Q20 
+
+function filterEvenLengthWords (array){
+  var arr = [];
+  for (var i = 0; i<array.length ; i++)
+  {
+    if(array[i].length %2 === 0){
+      arr.push(array[i])
+    }
+  }
+  return arr;
+  
+}
+
+//Q21 
+
+function popLastElement(array){
+  
+ for(var i=0; i<array.length ; i++){
+   array[i].pop();
+ }
+ return array
+}
+
+//Q22 
+
+function pushLastElement (array,element) {
+   for(var i=0; i<array.length ; i++){
+   array[i].push(element);
+ }
+ return array
+}
+
+
+//Q23
+
+function sumArrays(array){
+  var result = 0;
+  for (var i =0 ; i<array.length ; i++){
+    var a = array[i];
+    for(var j =0 ; j<a.length ; j++) {
+      result = result + a[j];
+    }
+    
+  }
+  return result;
+  
+}
+
+//Q24 
+
+function multiplyBySmallest (array) {
+  var min = array[0];
+  var arr = [];
+
+  for(var i=1 ; i < array.length ; i++) {
+    if(array[i] < min) {
+      min = array[i];
+    }
+  }
+  for (var i = 0 ; i <array.length ; i++){
+    arr.push(array[i]*2)
+  }
+  return arr;
+}
+
+//Q25 
+
+function joinArrays(array) {
+  var arr = [];
+  var a = array.join();
+  arr.push(a);
+  arr = arr.split(', ');
+  return arr;
+
+  }
+
+  //Q26
+
+  function sumOddEven(array){
+    var arr = [];
+    var odd = 0;
+    var even = 0;
+    for ( var i=0 ; i<array.length ; i++){
+         if (array[i] % 2 === 0) {
+          even = even + array[i];
+         }
+         else if (array[i] % 2 !== 0) {
+          odd = odd + array[i];
+         }
+    }
+    arr.push(odd);
+    arr.push(even);
+    return arr;
+  }
+
+
+  //Q27 
+
+  function shortestOfMixed (array) {
+    // var str = ''
+    var min = 30;
+    var result;
+    var length = array.length;
+    if (length === 0){
+      return 0;
+    }
+    else {
+    for (var i = 0; i<array.length ; i++) {
+      if(typeof array[i] === 'string'){
+         if(array[i].length<min) {
+          min = array[i].length;
+          result = array[i];
+         }
+
+    }
+
+    // result = '';
+    // else if (typeof array[i] === 'number'){
+    //   var str = '';
+    //   return str;
+    //   }
+    }
+  }
+    return result;
+  }
+
+
+ //Q28
+
+ // function smallestOfMixed (array) {
+
+ //   var min = 30;
+    
+ //    var length = array.length;
+ //    if (length === 0){
+ //      return 0;
+ //    }
+ //    else {
+ //    for (var i = 0; i<array.length ; i++) {
+ //      if (array[i].length<min){
+         
+ //          min = array[i].length;
+ //    }
+
+  
+ //    }
+ //  }
+ //    return min;
+
+ // }
